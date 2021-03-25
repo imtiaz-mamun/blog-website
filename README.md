@@ -1,2 +1,3 @@
-# blog-website
+# cd blog-website
+# npm start
  
