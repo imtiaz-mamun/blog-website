@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="eg">
+    <head>
+      <meta charset="UTF-8">
+         <meta http-equiv="x-UA-Compatidle" content="IE-edge">
+          <meta name="viewpot" content="width=devico-width, initial-scale=1">
+           <link rel="shortcut icon"href="imgs/favicon.ico"> 
+      <link rel="stylesheet" type="text/css" href="../css/home.css">
+      <title> Home </title>
+      <style type="text/css">
+        #talkbubble {
+         width: 120px;
+         height: 80px;
+         background: dark-blue;
+         position: relative;
+         -moz-border-radius:    10px;
+         -webkit-border-radius: 10px;
+         border-radius:         10px;
+      }
+      #talkbubble:before {
+         content:"";
+         position: absolute;
+         right: 100%;
+         top: 26px;
+         width: 0;
+         height: 0;
+         border-top: 13px solid transparent;
+         border-right: 26px solid red;
+         border-bottom: 13px solid transparent;
+      }
+      .reveal-modal-terms {
+        /*visibility: hidden;*/
+        display: none; 
+        width: 100%;
+        height :100%; // what ever you like
+        overflow: auto;
+        background: #44FFff;
+        position: absolute;
+        z-index: 101;
+        margin: auto;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        -moz-box-shadow: 0 0 10px rgba(0,0,0,.4);
+        -webkit-box-shadow: 0 0 10px rgba(0,0,0,.4);
+        -box-shadow: 0 0 10px rgba(0,0,0,.4);
+        overflow-y: scroll;
+        }
+        .close_mod{
+          border-radius: 50%;
+          background: #FF0000;
+          width: 50px;
+          height: 50px;
+          position: absolute;
+          left: 90%;
+          top: 0%;
+          font-size: 36px;
+          z-index: 99999;
+          text-align: center;
+          cursor: pointer;
+        }
+      </style>
+      </head>
+      <body>
+<div id="postDiv">
+        <div class="item-1">
+          
+          <h1>U-Man</h1>
+        <p>"You take the red book - you stay in Wonderland and I show how deep the Sky."</p>
+
+          <button onclick="showP1C()">Comments</button>
+        </div>
+        <div class="item-2">
+          <h1>D-HHH</h1>
+        <p >"This is your last chance. After this, there is no turning back."</p>
+          <button onclick="showP1C()">Comments</button>
+        </div>
+        <div class="item-3">
+          <h1>X-XYZ</h1>
+        <p>"You take the blue book - the story ends, you wake up in your bed and believe whatever you want to believe."</p>
+          <button onclick="showP1C()">Comments</button>
+        </div>
+</div>
+
+
+<div id="commentDiv" class="reveal-modal-terms">
+  <div class="close_mod" onclick="close_mod()">X</div>
+  <div class="talk-bubble">
+    <div class="talktext">
+      <p>CSS Talk Bubble configured by classes. Defaults to square shape, no triangle. Height is auto-adjusting to the height of the text.</p>
+    </div>
+  </div>
+  <div class="talk-bubble tri-right left-top">
+    <div class="talktext">
+      <p>This one adds a right triangle on the left, flush at the top by using .tri-right and .left-top to specify the location.</p>
+    </div>
+  </div>
+  <div class="talk-bubble tri-right left-in">
+    <div class="talktext">
+      <p>This talk-bubble uses .left-in class to show a triangle on the left slightly indented. Still a blocky square.</p>
+    </div>
+  </div>
+  <div class="talk-bubble tri-right round btm-left">
+    <div class="talktext">
+      <p>And now using .round we can smooth the sides down. Also uses .btm-left to show a triangle at the bottom flush to the left.</p>
+    </div>
+  </div>
+  <div class="talk-bubble tri-right border round btm-left-in">
+    <div class="talktext">
+      <p>Now we add a border and it looks like a comic. Uses .border .round and .btm-left-in</p>
+    </div>
+  </div>
+  <div class="talk-bubble tri-right border btm-right-in">
+    <div class="talktext">
+      <p>Now flipped the other way and square. Uses .border and .btm-right-in</p>
+    </div>
+  </div>
+  <div class="talk-bubble tri-right btm-right">
+    <div class="talktext">
+      <p>Flush to the bottom right. Uses .btm-right only.</p>
+    </div>
+  </div>
+  <div class="talk-bubble tri-right round right-in">
+    <div class="talktext">
+      <p>Moving our way back up the right side indented. Uses .round and .right-in</p>
+    </div>
+  </div>
+  <div class="talk-bubble tri-right round border right-top">
+    <div class="talktext">
+      <p>And finally on the right flush at the top. Uses .round .border and .right-top</p>
+    </div>
+  </div>
+</div>
+        <script type="text/javascript">
+          function showP1C(){
+            document.getElementById("commentDiv").style.display = "block";
+            document.getElementById("postDiv").style.visibility = "hidden";
+          }
+          function close_mod(){
+            document.getElementById("commentDiv").style.display = "none";
+            document.getElementById("postDiv").style.visibility = "visible";
+          }
+        </script>
+
+     </body>
+</html>
